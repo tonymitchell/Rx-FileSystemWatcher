@@ -11,6 +11,8 @@
 		[SetUp]
 		public void BeforeEachTest()
 		{
+			// Ensure current directory is set to test directory
+			Environment.CurrentDirectory = TestContext.CurrentContext.TestDirectory;
 			TempPath = Guid.NewGuid().ToString();
 			Directory.CreateDirectory(TempPath);
 		}
